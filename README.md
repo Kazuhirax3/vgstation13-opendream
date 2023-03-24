@@ -1,27 +1,23 @@
-# /vg/station [![Build Status](https://travis-ci.org/vgstation-coders/vgstation13.svg?branch=master)](https://travis-ci.org/vgstation-coders/vgstation13)
+# /vg/station - The OpenDream Port [![Build Status](https://travis-ci.org/vgstation-coders/vgstation13.svg?branch=master)](https://travis-ci.org/vgstation-coders/vgstation13)
 
 [![forinfinityandbyond](https://user-images.githubusercontent.com/5211576/29499758-4efff304-85e6-11e7-8267-62919c3688a9.gif)](https://www.reddit.com/r/SS13/comments/5oplxp/what_is_the_main_problem_with_byond_as_an_engine/dclbu1a)
 
-[Website](http://ss13.moe) - [Code](https://github.com/vgstation-coders/vgstation13)
+[/vg/station Official Site](http://ss13.moe) - [Original Source Code](https://github.com/vgstation-coders/vgstation13)
 
-[IRC](irc://irc.rizon.net/vgstation) (irc.rizon.net #vgstation), here is an embedded link to it:  [![Visit our IRC channel](https://kiwiirc.com/buttons/irc.rizon.net/vgstation.png)](https://kiwiirc.com/client/irc.rizon.net/?nick=Newcomer|?&theme=basic#vgstation)
-
-Discord Coding Server Invite Link:
-No longer available from github due to spambots using it.
-Ask on the /vg/ thread for a link or join the IRC at the link above and ask for an invite, there's a bot that relays messages between IRC and discord.
+Due to this being a side project, there is no actual facet for communication at this time. Do not go into the /vg/ IRC and Discord and expect any help with this. Clone at your own risk.
+**In no way is/are the maintainer(s) of this project affiliated with /vg/station at this time. Do not go bothering the /vg/ coders with any problems/suggestions/reports/whatever meant for this branch (and if you do, don't be surprised if you're told to fuck off).**
 
 ---
 
-### GETTING THE CODE
-The simplest but least useful way to obtain the code is using the Github .zip feature. You can click [here](https://github.com/vgstation-coders/vgstation13/archive/Bleeding-Edge.zip) to get the latest stable code as a .zip file, then unzip it to wherever you want. Alternatively, a much more useful method is to use a git client, the process for getting and using one is described below, (for more information our coders in IRC can tell you how to use one).
+**>what is this**
+Just a fork of the main /vg/ code to try and make it OpenDream compatible. Shit will break. This is an effort to fix it.
 
-### Git client
+**>how get code**
+Use your favorite git client and clone the repo:
+	git clone https://github.com/Kazuhirax3/vgstation13-opendream <folder-to-clone-to>
 
-The more complicated but infinitely more useful way is to use a 'git' client.
-
-We recommend and support our users using the smartgit client, obtainable at [smartgit](http://www.syntevo.com/smartgit/). After installing it, create a new file folder where you want to host the code, right click on that folder and click on "Open in Smartgit".
-
-When that opens, click repository at the top left and choose 'clone'. You can either use the link for the main repository https://github.com/vgstation-coders/vgstation13.git, or to clone your own fork the format is https://github.com/USERNAME/REPONAME.git, just copy the URL at your fork and add .git.
+**>todo**
+Clean up the rest of README.md, werk on code, learn DM, kill suicidal thoughts with caffeine
 
 #### Updating the Code
 
