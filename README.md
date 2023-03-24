@@ -38,6 +38,7 @@ We have only one branch (for now), and that is the *Bleeding-Edge-OpenDream* bra
 **>installation**
 
 These directions should work for Linux, Windows, and macOS. All you need to do is tweak it to your OS's needs (e.g. adding .exe to the end of the executable files).
+**Note: On Linux and macOS, it is recommended you have a functioning 32-bit WINEPREFIX or a VM prepared for BYOND so that you can still use dreammaker.exe!** For the former choice, the [WineHQ AppDB page for BYOND](https://appdb.winehq.org/objectManager.php?sClass=version&iId=41198) has instructions for running BYOND. Keep in mind that you'll only need to use dreammaker.exe out of the entire BYOND suite, and you shouldn't expect BYOND hub, Dreamseeker, or anything else to work *right*.
 
 First, go clone [OpenDream](https://github.com/OpenDreamProject/OpenDream) and compile it. This requires .NET >=7.0 and its SDK, obtainable from [Microsoft](https://dotnet.microsoft.com/en-us/download/dotnet/7.0).
 
@@ -65,7 +66,7 @@ Theoretically, the compilation will complete, and a new file named code.json wil
 
 		OpenDreamServer --cvar opendream.json_path=<path-to-vg-sauce>/code.json
 
-But right now, this shit just started so chances are it's going to break horribly. With hope and brains on my end, I hope to get it into a state where a "successful" build can be done right away.
+But given that this fork is very new, the compilation will fail with many, many errors (as of editing on 23-Mar-2023 at around midnight, 111 errors and 1659 warnings).
 
 **EVERYTHING BELOW THIS LINE MAY BE INACCURATE WITH OPENDREAM! FOLLOW AT YOUR OWN RISK!**
 
