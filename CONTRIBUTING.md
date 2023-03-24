@@ -26,3 +26,5 @@ It is also suggested that you hop into irc.rizon.net #vgstation to discuss your 
 
 * Things are going to break. A lot.
 * Again, **this project isn't affiliated with the main /vg/ coderbus.** Don't expect help, and don't bug the shit out of them with ANYTHING from this project.
+* **DO NOT MERGE CHANGES TO UPSTREAM, FOR FUCK'S SAKE!!!** They will fucking muder you. Don't. Changes here will most likely *not* work with BYOND given some key differences.
+* On that note, **DO NOT SYNC THIS REPO WITH UPSTREAM!** We want the repo to stay "frozen" in relation to upstream /vg/, so that we are consistently working on the same codebase and not fighting an uphill battle. If you wanna fight that battle, go make your own fork.
