@@ -10,41 +10,64 @@ Due to this being a side project, there is no actual facet for communication at 
 ---
 
 **>what is this**
+
 Just a fork of the main /vg/ code to try and make it OpenDream compatible. Shit will break. This is an effort to fix it.
 
 **>how get code**
+
 Use your favorite git client and clone the repo:
 	git clone https://github.com/Kazuhirax3/vgstation13-opendream <folder-to-clone-to>
 
 **>todo**
+
 Clean up the rest of README.md, werk on code, learn DM, kill suicidal thoughts with caffeine
 
 #### Updating the Code
 
+**THIS SECTION NEEDS REWORKING, DUMB FUCK**
 After you have cloned, make sure you have a remote to the main repository and your own forked repository by making a remote using the links above. By right clicking on your remote to this repo you can 'pull' the most recent version of the code from the main repository.
 
 You can then create new branches of code directly from our Bleeding-Edge branch on your computer.
 
 Warning: If you checkout different branches or update the code while Dream Maker is open, this can cause problems when someone adds/removes files or when one of the files changed is currently open.
 
-#### Branches
+**>code branches**
 
-Keep in mind that we have multiple branches for various purposes.
+We have only one branch (for now), and that is the *Bleeding-Edge-OpenDream* branch.
 
-* *master* - "stable" but ancient code, it was used on the main server until we realized we like living on the edge  :sunglasses:.
-* *Bleeding-Edge* - The latest code, this code is run on the main server.  _Please do any development against this branch!_
+**>installation**
 
-### INSTALLATION
+These directions should work for Linux, Windows, and macOS. All you need to do is tweak it to your OS's needs (e.g. adding .exe to the end of the executable files).
 
-First-time installation should be fairly straightforward.  First, you'll need BYOND installed.  You can get it from [here](http://www.byond.com/).
+First, go clone [OpenDream](https://github.com/OpenDreamProject/OpenDream) and compile it. This requires .NET >=7.0 and its SDK, obtainable from [Microsoft](https://dotnet.microsoft.com/en-us/download/dotnet/7.0).
 
-This is a sourcecode-only release, so the next step is to compile the server files.  Open vgstation13.dme by double-clicking it, open the Build menu, and click compile.  This'll take a little while, and if everything's done right you'll get a message like this:
+To build OpenDream, you may need to run:
 
-    saving vgstation13.dmb (DEBUG mode)
+	dotnet restore
 
-    vgstation13.dmb - 0 errors, 0 warnings
+before you can run:
 
-If you see any errors or warnings, something has gone wrong - possibly a corrupt download or the files extracted wrong, or a code issue on the main repo.  Ask on IRC.
+	dotnet build
+
+in the root directory containing OpenDream's source code. At least on my Loonux machine, the executables produced are found in:
+
+	<opendream-source-dir>/bin/Content.Server (OpenDreamServer)
+	<opendream-source-dir>/bin/Content.Client (OpenDreamClient)
+	<opendream-source-dir>/bin/Content.IntegrationTests (DMCompiler)
+
+For the sake of making it easy, I highly recommend you add the OpenDream executables to your PATH.
+
+Next, build /vg/station with DMCompiler by passing the vgstation13.dme file as an argument:
+
+		DMCompiler <path-to-vg-sauce>/vgstation13.dme
+
+Theoretically, the compilation will complete, and a new file named code.json will be made. Run the following to start up the freshly compiled and ready to go server:
+
+		OpenDreamServer --cvar opendream.json_path=<path-to-vg-sauce>/code.json
+
+But right now, this shit just started so chances are it's going to break horribly. With hope and brains on my end, I hope to get it into a state where a "successful" build can be done right away.
+
+**EVERYTHING BELOW THIS LINE MAY BE INACCURATE WITH OPENDREAM! FOLLOW AT YOUR OWN RISK!**
 
 To use the SQLite preferences, rename players2_empty.sqlite to players2.sqlite
 
